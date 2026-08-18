@@ -10,9 +10,12 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }: {
+  outputs = { nixpkgs, home-manager, ... }:
+  let
+    system = builtins.currentSystem;
+  in {
     homeConfigurations.berry = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+      pkgs = nixpkgs.legacyPackages.${system};
 
       modules = [
         ./home.nix
