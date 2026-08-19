@@ -13,9 +13,14 @@
   outputs = { nixpkgs, home-manager, ... }:
   let
     system = builtins.currentSystem;
+    vkmarkOverlay = final: prev: {
+      vkmark = prev.vkmark.overrideAttrs (o: {
+        nativeBuildInputs = (o.nativeBuildInputs or []) ++ [ final.wayland-scanner ];
+      });
+    };
   in {
     homeConfigurations.berry = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = (nixpkgs.legacyPackages.${system}).extend vkmarkOverlay;
 
       modules = [
         ./home.nix
