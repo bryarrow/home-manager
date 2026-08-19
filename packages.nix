@@ -7,7 +7,7 @@ in
 
 {
   # 用户级软件放这里；系统服务、驱动和桌面环境仍放在 /etc/nixos。
-  
+
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "google-chrome"
     "code"
@@ -18,20 +18,22 @@ in
     enable = true;
     package = pkgs.vscode.fhs;
   };
-  
+
   home.packages = with pkgs; [
+    clash-verge-rev
     codex
     dconf-editor
     ghostty
+    glmark2
     google-chrome
     hm-apps
     hm-sync-dconf
     hmcl
+    mission-center
     opencode
+    resources
     telegram-desktop
+    vkmark
     yazi
-
-
-
   ];
 }
