@@ -9,14 +9,14 @@
     # GNOME 外观：主题、字体、光标和强调色。
     "org/gnome/desktop/interface" = {
       accent-color = "pink";
+      clock-format = "12h";
       cursor-theme = "Sweet-cursors";
-      gtk-theme = "adw-gtk3";
       enable-animations = true;
       font-antialiasing = "rgba";
       font-hinting = "full";
-      font-name = "Source Han Sans 10";
+      gtk-theme = "adw-gtk3";
       icon-theme = "Papirus-Apps";
-      clock-format = "12h";
+      show-battery-percentage = true;
     };
 
 
@@ -32,11 +32,7 @@
 
     # Mutter/Wayland 相关实验特性。
     "org/gnome/mutter" = {
-      experimental-features = [
-        "scale-monitor-framebuffer"
-        "autoclose-xwayland"
-        "xwayland-native-scaling"
-      ];
+      experimental-features = ["scale-monitor-framebuffer" "autoclose-xwayland" "xwayland-native-scaling"];
     };
 
     # 显示注销按键
@@ -48,12 +44,11 @@
     "org/gnome/shell/extensions/dash-to-dock" = {
       background-opacity = 0.80;
       click-action = "focus-minimize-or-previews";
-      dash-max-icon-size = 41;
+      dash-max-icon-size = 48;
       dock-position = "BOTTOM";
       height-fraction = 0.90;
       isolate-workspaces = true;
       preferred-monitor = -2;
-      preferred-monitor-by-connector = "eDP-2";
     };
 
     # Blur my Shell 扩展的全局状态。
