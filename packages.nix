@@ -12,6 +12,8 @@ in
     "google-chrome"
     "code"
     "vscode"
+    "qq"
+    "wechat-uos"
   ];
   
   programs.vscode = {
@@ -20,7 +22,6 @@ in
   };
 
   home.packages = with pkgs; [
-    clash-verge-rev
     codex
     dconf-editor
     ghostty
@@ -31,6 +32,8 @@ in
     hmcl
     mission-center
     opencode
+    qq
+    wechat-uos
     resources
     telegram-desktop
     vkmark
