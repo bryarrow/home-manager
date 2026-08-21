@@ -27,16 +27,18 @@ in
     ghostty
     glmark2
     google-chrome
+    gparted
     hm-apps
     hm-sync-dconf
     hmcl
     mission-center
     opencode
+    prismlauncher
     qq
-    wechat-uos
     resources
     telegram-desktop
     vkmark
+    wechat-uos
     yazi
   ];
 }
