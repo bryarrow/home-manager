@@ -30,11 +30,6 @@
       button-layout = "appmenu:minimize,maximize,close";
     };
 
-    # Mutter/Wayland 相关实验特性。
-    "org/gnome/mutter" = {
-      experimental-features = ["scale-monitor-framebuffer" "autoclose-xwayland" "xwayland-native-scaling"];
-    };
-
     # 显示注销按键
     "org/gnome/shell" = {
       always-show-log-out = true;
