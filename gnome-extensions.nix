@@ -112,5 +112,6 @@ in
   
   home.packages = with pkgs; [
     gnomeExtensions.caffeine
+    gnomeExtensions.compiz-alike-magic-lamp-effect
   ];
 }
