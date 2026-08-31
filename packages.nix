@@ -3,6 +3,7 @@
 let
   hm-apps = pkgs.callPackage ./pkgs/hm-apps/package.nix { };
   hm-sync-dconf = pkgs.callPackage ./pkgs/hm-sync-dconf/package.nix { };
+  dsh = pkgs.callPackage ./pkgs/dsh/package.nix { };
 in
 
 {
@@ -24,6 +25,7 @@ in
   home.packages = with pkgs; [
     codex
     dconf-editor
+    dsh
     ghostty
     glmark2
     google-chrome
