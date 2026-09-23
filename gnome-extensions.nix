@@ -3,11 +3,11 @@
 let
   chinese-calendar = pkgs.stdenvNoCC.mkDerivation {
     pname = "gnome-shell-extension-chinese-calendar";
-    version = "1.4";
+    version = "1.7";
 
     src = pkgs.fetchurl {
-      url = "https://extensions.gnome.org/review/download/72122.shell-extension.zip";
-      hash = "sha256-qOlYzt1ePvmP4vlW1DFpJyNZd2ilaw3e02jmYVgXfTo=";
+      url = "https://extensions.gnome.org/review/download/75318.shell-extension.zip";
+      hash = "sha256-mh5X4hDfBdTTKKhY6I2AxPuejkUOQO7NnJhUl5QdQ1g=";
     };
 
     nativeBuildInputs = [
