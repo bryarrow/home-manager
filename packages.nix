@@ -32,7 +32,6 @@ in
     gparted
     hm-apps
     hm-sync-dconf
-    hmcl
     mission-center
     opencode
     prismlauncher
