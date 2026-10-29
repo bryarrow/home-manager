@@ -3,11 +3,11 @@
 let
   chinese-calendar = pkgs.stdenvNoCC.mkDerivation {
     pname = "gnome-shell-extension-chinese-calendar";
-    version = "1.7";
+    version = "1.8";
 
     src = pkgs.fetchurl {
-      url = "https://extensions.gnome.org/review/download/75318.shell-extension.zip";
-      hash = "sha256-mh5X4hDfBdTTKKhY6I2AxPuejkUOQO7NnJhUl5QdQ1g=";
+      url = "https://extensions.gnome.org/review/download/76340.shell-extension.zip";
+      hash = "sha256-FwshcpXncZpPIVzTzKZ7EnuFLohpY0Qy+QUr/CEzKho=";
     };
 
     nativeBuildInputs = [
@@ -66,38 +66,6 @@ let
       platforms = pkgs.lib.platforms.linux;
     };
   };
-
-  blur-my-shell-head = pkgs.gnomeExtensions.blur-my-shell.overrideAttrs (old: {
-    version = "unstable-2026-07-29";
-
-    src = pkgs.fetchFromGitHub {
-      owner = "aunetx";
-      repo = "blur-my-shell";
-      rev = "36ea91536e77b94a729053cf2849be6b53c8d50b";
-      hash = "sha256-f+iVw6QLzmd7TdQU62JDywE2BJcJf0B3x7eB1Xix9Vs=";
-    };
-
-    nativeBuildInputs = old.nativeBuildInputs ++ [
-      pkgs.gnome-shell
-      pkgs.unzip
-    ];
-
-    buildPhase = ''
-      runHook preBuild
-      make build
-      runHook postBuild
-    '';
-
-    installPhase = ''
-      runHook preInstall
-      mkdir -p $out/share/gnome-shell/extensions/blur-my-shell@aunetx
-      unzip -q build/blur-my-shell@aunetx.shell-extension.zip \
-        -d $out/share/gnome-shell/extensions/blur-my-shell@aunetx
-      glib-compile-schemas --strict \
-        $out/share/gnome-shell/extensions/blur-my-shell@aunetx/schemas
-      runHook postInstall
-    '';
-  });
 in
 
 {
@@ -106,9 +74,6 @@ in
 
   home.file.".local/share/gnome-shell/extensions/clipboard-indicator@tudmotu.com".source =
     "${clipboard-indicator}/share/gnome-shell/extensions/clipboard-indicator@tudmotu.com";
-
-  home.file.".local/share/gnome-shell/extensions/blur-my-shell@aunetx".source =
-    "${blur-my-shell-head}/share/gnome-shell/extensions/blur-my-shell@aunetx";
   
   home.packages = with pkgs; [
     gnomeExtensions.caffeine
