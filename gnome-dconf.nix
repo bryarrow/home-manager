@@ -15,7 +15,6 @@
       font-antialiasing = "rgba";
       font-hinting = "full";
       gtk-theme = "adw-gtk3";
-      icon-theme = "Papirus-Apps";
       show-battery-percentage = true;
     };
 
