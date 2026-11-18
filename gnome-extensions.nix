@@ -36,11 +36,11 @@ let
 
   clipboard-indicator = pkgs.stdenvNoCC.mkDerivation {
     pname = "gnome-shell-extension-clipboard-indicator";
-    version = "71";
+    version = "74";
 
     src = pkgs.fetchurl {
-      url = "https://extensions.gnome.org/review/download/70694.shell-extension.zip";
-      hash = "sha256-aHy0BPlUCVjdsMHeY4lwVyzvc/IvAW5dbG1vXUzVX5c=";
+      url = "https://extensions.gnome.org/review/download/78425.shell-extension.zip";
+      hash = "sha256-Plrw6PKkyPrN9Ge+5nQ07rX3G+D2GB/Gtz/RS5XWVSM=";
     };
 
     nativeBuildInputs = [
