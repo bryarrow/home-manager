@@ -7,6 +7,7 @@
     ./gtk3-themes.nix
     ./qt-themes.nix
     ./fonts.nix
+    ./rime.nix
     ./packages.nix
   ];
 

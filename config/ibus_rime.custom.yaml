@@ -1,0 +1,13 @@
+# Rime / ibus-rime 外观补丁
+#
+# 由 home-manager（rime.nix）部署到 ~/.config/ibus/rime/ibus_rime.custom.yaml，
+# 生效方式：home-manager switch 之后，在 ibus 托盘菜单点「部署」。
+#
+# inline_preedit: 把预编辑文本内嵌到应用程序的输入框里（true 必须保留）。
+# preedit_style:
+#   preview     —— 输入框里显示"转换后的文字预览"，未转换的拼音作为辅助文本
+#                  画在候选浮窗里（这是 ibus-rime 默认行为，就是现在看到的样子）。
+#   composition —— 输入框里直接显示拼音编码本身，候选浮窗只列候选。
+patch:
+  style/inline_preedit: true
+  style/preedit_style: composition

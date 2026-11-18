@@ -5,6 +5,7 @@
 - `home.nix`：用户入口和通用 Home Manager 设置。
 - `gnome-dconf.nix`：GNOME 和扩展的 dconf 声明。
 - `packages.nix`：用户级软件包。
+- `rime.nix`：把 `config/ibus_rime.custom.yaml` 部署为 ibus-rime 的外观补丁（预编辑内嵌、显示拼音编码）。
 - `pkgs/hm-apps`：包装 `hm-apps` 命令，用来维护 `packages.nix` 中的用户软件。
 - `pkgs/hm-sync-dconf`：把 dconf 同步工具包装成用户包，安装后命令为 `hm-sync-dconf`。
 
