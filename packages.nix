@@ -25,7 +25,7 @@ in
   home.packages = with pkgs; [
     codex
     dconf-editor
-    dsh
+    deepseek-harness
     ghostty
     glmark2
     google-chrome
