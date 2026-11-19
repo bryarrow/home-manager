@@ -13,8 +13,6 @@ in
     "google-chrome"
     "code"
     "vscode"
-    "qq"
-    "wechat-uos"
   ];
   
   programs.vscode = {
@@ -33,13 +31,10 @@ in
     hm-apps
     hm-sync-dconf
     mission-center
-    opencode
     prismlauncher
-    qq
     resources
     telegram-desktop
     vkmark
-    wechat-uos
     yazi
   ];
 }
