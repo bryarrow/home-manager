@@ -1,4 +1,4 @@
-{ fonts, pkgs, ... }:
+{ config, fonts, pkgs, ... }:
 
 {
   home.packages = with pkgs; [
@@ -39,4 +39,8 @@
       ];
     };
   };
+
+  # 将 Home Manager Profile 中的字体暴露给 Flatpak
+  xdg.dataFile."fonts/home-manager".source =
+    "${config.home.profileDirectory}/share/fonts";
 }
