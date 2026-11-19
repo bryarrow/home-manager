@@ -36,68 +36,96 @@
 
     # Dash to Dock 扩展：Dock 位置、大小和透明度。
     "org/gnome/shell/extensions/dash-to-dock" = {
-      background-opacity = 0.80;
+      always-center-icons = true;
+      apply-custom-theme = false;
+      background-color = "rgb(154,153,150)";
+      background-opacity = 0.80000000000000004;
       click-action = "focus-minimize-or-previews";
+      custom-background-color = false;
+      custom-theme-customize-running-dots = false;
+      custom-theme-shrink = false;
+      customize-alphas = true;
       dash-max-icon-size = 48;
+      dock-fixed = false;
       dock-position = "BOTTOM";
-      height-fraction = 0.90;
+      extend-height = false;
+      height-fraction = 0.90000000000000002;
+      intellihide-mode = "FOCUS_APPLICATION_WINDOWS";
       isolate-workspaces = true;
+      max-alpha = 0.40000000000000002;
+      middle-click-action = "launch";
       preferred-monitor = -2;
+      preferred-monitor-by-connector = "DSI-1";
+      running-indicator-dominant-color = true;
+      running-indicator-style = "DOTS";
+      scroll-action = "cycle-windows";
+      shift-click-action = "minimize";
+      shift-middle-click-action = "launch";
+      show-icons-emblems = true;
+      show-show-apps-button = true;
+      transparency-mode = "DYNAMIC";
+      unity-backlit-items = false;
     };
+
 
     # Blur my Shell 扩展的全局状态。
     "org/gnome/shell/extensions/blur-my-shell" = {
       rounded-blur-found = true;
-      settings-version = 2;
+      settings-version = 8;
     };
 
     # Blur my Shell 的子页面设置。
     "org/gnome/shell/extensions/blur-my-shell/appfolder" = {
-      brightness = 0.60;
-      sigma = 30;
+      blur = true;
+      pipeline = "pipeline_default";
     };
     "org/gnome/shell/extensions/blur-my-shell/applications" = {
-      blur = true;
-      dynamic-opacity = false;
+      blur = false;
       pipeline = "pipeline_default";
-      whitelist = ["com.mitchellh.ghostty"];
     };
     "org/gnome/shell/extensions/blur-my-shell/coverflow-alt-tab" = {
       pipeline = "pipeline_default";
     };
     "org/gnome/shell/extensions/blur-my-shell/dash-to-dock" = {
       blur = true;
-      brightness = 0.60;
-      pipeline = "pipeline_default_rounded";
-      sigma = 30;
+      corner-radius = 24;
+      override-background = true;
+      pipeline = "pipeline_liquid_glass";
       static-blur = false;
-      style-dash-to-dock = 0;
+      style-dash-to-dock = 3;
     };
     "org/gnome/shell/extensions/blur-my-shell/lockscreen" = {
       pipeline = "pipeline_default";
     };
     "org/gnome/shell/extensions/blur-my-shell/overview" = {
+      blur = true;
       pipeline = "pipeline_default";
+      style-components = 2;
     };
     "org/gnome/shell/extensions/blur-my-shell/panel" = {
-      brightness = 0.60;
       corner-radius = 0;
-      force-light-text = true;
+      force-light-text = false;
+      gradient-panel = false;
+      match-theme-in-overview = false;
+      override-background = true;
       override-background-dynamically = true;
-      pipeline = "pipeline_default";
-      sigma = 30;
+      override-background-dynamically-mode = 1;
+      pipeline = "pipeline_liquid_glass";
+      rounded-corners = 1;
       static-blur = false;
+      style-panel = 0;
     };
     "org/gnome/shell/extensions/blur-my-shell/screenshot" = {
-      pipeline = "pipeline_default";
+      pipeline = "pipeline_liquid_glass";
     };
     "org/gnome/shell/extensions/blur-my-shell/window-list" = {
-      brightness = 0.60;
-      sigma = 30;
+      pipeline = "pipeline_default";
     };
     "org/gnome/shell/extensions/blur-my-shell/popup" = {
-      brightness = 0.70;
-      pipeline = "pipeline_default_rounded";
+      override-background = true;
+      pipeline = "pipeline_liquid_glass";
+      preserve-shell-theme = false;
+      style-popup = 3;
     };
 
     # Just Perfection 扩展：GNOME Shell 元素显示/隐藏和布局偏好。
