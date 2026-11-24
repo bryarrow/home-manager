@@ -21,10 +21,10 @@ in
   };
 
   home.packages = with pkgs; [
-    codex
     dconf-editor
     deepseek-harness
     ghostty
+    github-cli
     glmark2
     google-chrome
     gparted
