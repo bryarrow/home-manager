@@ -46,5 +46,6 @@
     gnomeExtensions.compiz-alike-magic-lamp-effect
     gnomeExtensions.dock-window-preview
     gnomeExtensions.dynamic-music-pill
+    gnomeExtensions.launchpad-search
   ];
 }
