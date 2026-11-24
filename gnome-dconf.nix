@@ -110,7 +110,6 @@
       override-background = true;
       override-background-dynamically = true;
       override-background-dynamically-mode = 1;
-      pipeline = "pipeline_liquid_glass";
       rounded-corners = 1;
       static-blur = false;
       style-panel = 0;
