@@ -8,6 +8,7 @@
     ./qt-themes.nix
     ./fonts.nix
     ./rime.nix
+    ./mimeapps.nix
     ./packages.nix
   ];
 
