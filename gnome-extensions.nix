@@ -41,9 +41,10 @@
 
   home.packages = with pkgs; [
     gnomeExtensions.caffeine
+    gnomeExtensions.chinese-calendar
+    gnomeExtensions.clipboard-indicator
     gnomeExtensions.compiz-alike-magic-lamp-effect
     gnomeExtensions.dock-window-preview
-    gnomeExtensions.clipboard-indicator
-    gnomeExtensions.chinese-calendar
+    gnomeExtensions.dynamic-music-pill
   ];
 }
