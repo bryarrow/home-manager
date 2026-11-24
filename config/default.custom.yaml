@@ -1,0 +1,19 @@
+# Rime 全局补丁：中英文切换改为 Ctrl+Space。
+#
+# 由 home-manager（rime.nix）部署到 ~/.config/ibus/rime/default.custom.yaml。
+#
+# 两个注意点：
+# 1. 必须保留 __include：本机 rime-ice 的 default.yaml 是空的，共享目录里的
+#    default.custom.yaml 只用这一行引入 rime_ice_suggestion。用户目录的同名文件
+#    会覆盖共享目录的版本，不写就会丢掉方案列表、标点、快捷键等全部默认配置。
+# 2. Ctrl+Space 是组合键，只能写在 key_binder 里；ascii_composer/switch_key
+#    只接受单个修饰键（Shift_L、Control_R 之类），写组合键会被 librime 忽略。
+patch:
+  __include: rime_ice_suggestion:/
+
+  # 追加而非覆盖 key_binder/bindings，保留 rime-ice 的翻页、光标等快捷键。
+  key_binder/bindings/+:
+    - { when: always, accept: Control+space, toggle: ascii_mode }
+
+  # 关掉左 Shift 的单击切换中英；只想「增加」Ctrl+Space、保留 Shift 的话删掉这一行。
+  ascii_composer/switch_key/Shift_L: noop

@@ -5,7 +5,8 @@
 - `home.nix`：用户入口和通用 Home Manager 设置。
 - `gnome-dconf.nix`：GNOME 和扩展的 dconf 声明。
 - `packages.nix`：用户级软件包。
-- `rime.nix`：把 `config/ibus_rime.custom.yaml` 部署为 ibus-rime 的外观补丁（预编辑内嵌、显示拼音编码）。
+- `rime.nix`：把 `config/ibus_rime.custom.yaml` 部署为 ibus-rime 的外观补丁（预编辑内嵌、显示拼音编码），
+  把 `config/default.custom.yaml` 部署为 Rime 全局按键补丁（Ctrl+Space 切换中英文）。改完 switch 后需重新部署 Rime。
 - `mimeapps.nix`：MIME 默认程序注册表，不绑定某个应用。用 `groups`（web/text/code/image/video/audio/pdf/archive）
   挑类型，用 `registrations` 声明「哪个应用接管哪些类型」：
   `{ app = "mpv.desktop"; default = groups.video; }`。
